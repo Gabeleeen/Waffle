@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Stack
 {
 	int[] elements = new int[1];
@@ -34,5 +36,15 @@ public class Stack
 	{
 		topStack--;
 		return elements[topStack + 1];
+	}
+	
+	public ArrayList<Integer> Pop(int n)
+	{
+		ArrayList<Integer> popped = new ArrayList<Integer>();
+		
+		for(int i = 0; i < n; i++)
+			popped.add((n - 1) - i,Pop());
+		
+		return popped;
 	}
 }
