@@ -1,17 +1,18 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Stack
 {
 	int[] elements = new int[1];
-	int topStack = 1; 
+	int topStack = -1; 
 	
 	public void Push(int value)
 	{
-		if(topStack > elements.length)
+		if(topStack + 1 >= elements.length)
 			elements = DoubleLength();
 			
-		elements[topStack] = value;
 		topStack++;
+		elements[topStack] = value;
 	}
 	
 	public void Push(int[] values)
@@ -43,8 +44,9 @@ public class Stack
 		ArrayList<Integer> popped = new ArrayList<Integer>();
 		
 		for(int i = 0; i < n; i++)
-			popped.add((n - 1) - i,Pop());
+			popped.add(Pop());
 		
+		Collections.reverse(popped);
 		return popped;
 	}
 }
