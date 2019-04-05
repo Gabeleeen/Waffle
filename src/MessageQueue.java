@@ -21,6 +21,7 @@ public class MessageQueue
        Remove message at head. 
        @return the message that has been removed from the queue
        @precondition size() > 0 
+       @postcondition r != null
    */ 
    public Message remove() 
    { 
@@ -34,9 +35,12 @@ public class MessageQueue
    /** 
        	Append a message at tail. 
      	@param aMessage the message to be appended
+     	@postcondition aMessage != null
    */ 
    public void add(Message aMessage) 
    { 
+	   assert aMessage != null: "Failed precondition, can't add null message";
+	   
 	   if(tail + 1 == head)
     	  elements = DoubleLength();
     	  
@@ -46,6 +50,12 @@ public class MessageQueue
 	   count++; 
    } 
    
+   /** 
+  		Doubles the size of the queue to allow more elements to be added
+  		@return a Message array that's double the size with the same elements
+		@precondition count > 0
+		@postcondition newElem != null && newELem.length >= 2
+    */ 
    private Message[] DoubleLength()
    {
 	   assert count > 0: "Failed precondition, queue is empty";
@@ -79,13 +89,14 @@ public class MessageQueue
        Get message at head. 
        @return the message that is at the head of the queue 
        @precondition size() > 0 
+       @postcondition elements[head] != null
    */ 
    public Message peek() 
    { 
 	   assert count > 0: "Failed precondition, queue is empty";  
 	   return elements[head]; 
    }
-
+   
    private Message[] elements; 
    private int head; 
    private int tail; 

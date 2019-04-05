@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class stackTest {
@@ -40,11 +41,11 @@ class stackTest {
 		int[] nummer = new int[] {1,2,3,4,5};
 		stik.Push(nummer);
 		ArrayList<Integer> popped = stik.Pop(5);
-		assertEquals(1, popped.get(0));
-		assertEquals(2, popped.get(1));
-		assertEquals(3, popped.get(2));
-		assertEquals(4, popped.get(3));
-		assertEquals(5, popped.get(4));
+		assertEquals(1, (int)popped.get(0));
+		assertEquals(2, (int)popped.get(1));
+		assertEquals(3, (int)popped.get(2));
+		assertEquals(4, (int)popped.get(3));
+		assertEquals(5, (int)popped.get(4));
 	}
 	
 	@Test
