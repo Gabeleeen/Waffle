@@ -1,0 +1,35 @@
+Exercise 2
+
+Matrix.java
+
+Exercise 3
+
+Three examples of immutable classes from standard library are String, boolean and short.
+
+Exercise 4
+
+Stack.java and stackTest.java
+
+Exercise 5
+
+MessageQueue.java and Message.java
+
+Exercise 6
+
+MessageStack.java and Message.java
+
+Exercise 10
+
+The role of polymorphism in this situation is that the diffrent objects has something in common
+that can be used in Comparable<T>, an example can be that the objects has a color so you can use
+Comparable<Color>. 
+
+Exercise 12
+
+Filter.java and FilerUser.java
+
+Exercise 13
+
+CircleIcon.java
+
+Made by Gabriel Nilsson and Simon Nordqvist
