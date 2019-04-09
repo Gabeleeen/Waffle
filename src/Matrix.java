@@ -17,6 +17,20 @@ public class Matrix
 	
 	public int RowCount() { return elements[0].length; }
 	
+	public Matrix Add(Matrix other)
+	{
+		if(!(this.RowCount() == other.RowCount() && this.ColCount() == other.ColCount()))
+			return null;
+		
+		Matrix newMatrix = new Matrix(this.ColCount(), this.RowCount());
+		
+		for(int i = 0; i < newMatrix.ColCount(); i++)
+			for(int j = 0; j < newMatrix.RowCount();j++)
+				newMatrix.Set(j, i, (this.Get(j, i) + other.Get(j, i)));
+		
+		return newMatrix;
+	}
+	
 	public Matrix Multiply(Matrix other)
 	{
 		Matrix newMat = new Matrix(this.ColCount(), other.RowCount());
