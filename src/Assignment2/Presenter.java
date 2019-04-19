@@ -15,8 +15,8 @@ public abstract class Presenter extends java.applet.Applet implements ActionList
 	JFrame frame = new JFrame();
 	JTextArea textArea = new JTextArea("",10,1);
 	
-	JButton	prevButton = new JButton("Previous Image");
-	JButton nextButton = new JButton("Next Image");
+	JButton	prevButton;
+	JButton nextButton;
 	
 	/**
 	 * Default SerialVersionUID
