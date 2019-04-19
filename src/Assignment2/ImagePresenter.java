@@ -32,9 +32,8 @@ public class ImagePresenter extends Presenter
 		if(!frame.isVisible())
 			frame.setVisible(true);
 		
-		//jLab = (JLabel) CreateCenterComponent();
 		imageLab.setIcon(new ImageIcon(fileName));
-		//frame.add(imageLab, new BorderLayout().CENTER);
+		textArea.setText(imageNames.get(index));
 	}
 	
 	public void Initialize()
@@ -56,7 +55,7 @@ public class ImagePresenter extends Presenter
 		
 		frame.add(textArea, new BorderLayout().NORTH);
 		frame.add(imageLab, new BorderLayout().CENTER);
-		frame.setPreferredSize(new Dimension(500,500));
+		frame.setPreferredSize(new Dimension(700,700));
 		frame.pack();
 		frame.setVisible(true);
 	}
@@ -98,6 +97,7 @@ public class ImagePresenter extends Presenter
 			index = 0;
 		else
 			index++;
+		
 		
 		ShowImage(imageNames.get(index));
 	}
