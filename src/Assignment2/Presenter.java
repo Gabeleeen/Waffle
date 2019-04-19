@@ -1,6 +1,8 @@
 package Assignment2;
 
+import java.awt.Color;
 import java.awt.Component;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -27,6 +29,24 @@ public abstract class Presenter extends java.applet.Applet implements ActionList
 	{
 		textArea.setText(t);
 		textArea.repaint();
+	}
+	
+	public void SetUpButtons()
+	{		
+		prevButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				WestButtonPressed();
+			}
+		});
+		nextButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				EastButtonPressed();
+			}
+		});
 	}
 	
 	public JFrame getFrame() { return frame; }
