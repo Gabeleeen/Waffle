@@ -1,4 +1,4 @@
-package lecture7.visitorpassres;
+package Assignment2;
 
 public interface TreeVisitor<T, R> {
 	R visit(Tree<T> t, R initialResult);

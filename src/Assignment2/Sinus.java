@@ -1,4 +1,4 @@
-
+package Assignment2;
 
 public class Sinus implements Sampler {
 

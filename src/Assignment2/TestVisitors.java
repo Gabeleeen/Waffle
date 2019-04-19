@@ -1,4 +1,4 @@
-package lecture7.visitorpassres;
+package Assignment2;
 
 import java.util.ArrayList;
 import java.util.List;

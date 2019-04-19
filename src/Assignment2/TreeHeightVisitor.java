@@ -1,4 +1,4 @@
-package lecture7.visitorpassres;
+package Assignment2;
 
 public class TreeHeightVisitor<T> implements TreeVisitor<T, Integer> {
 

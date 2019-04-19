@@ -1,5 +1,4 @@
-package lecture7.visitorpassres;
-
+package Assignment2;
 import java.util.*;
 
 public class ListLeavesVisitor<T> implements TreeVisitor<T, List<T>> {
