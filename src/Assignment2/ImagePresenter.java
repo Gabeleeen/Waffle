@@ -33,7 +33,7 @@ public class ImagePresenter extends Presenter
 			frame.setVisible(true);
 		
 		imageLab.setIcon(new ImageIcon(fileName));
-		textArea.setText(imageNames.get(index));
+		ShowText(imageNames.get(index));
 	}
 	
 	public void Initialize()
@@ -64,7 +64,7 @@ public class ImagePresenter extends Presenter
 	public Component CreateCenterComponent() 
 	{
 		JLabel l = new JLabel();
-		l.setPreferredSize(new Dimension(1400,700));
+		l.setPreferredSize(new Dimension(150,100));
 		return l;
 	}
 	
@@ -105,9 +105,8 @@ public class ImagePresenter extends Presenter
 	
 	public static void main(String[] args)
 	{
-		imageNames.add("Chili.jpg");
-		imageNames.add("Duck.jpg");
-		imageNames.add("Panda.jpg");
+		for(String s : args)
+			imageNames.add(s);
 		
 		iPres = new ImagePresenter();
 		iPres.Initialize();

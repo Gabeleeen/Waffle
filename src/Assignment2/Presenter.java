@@ -31,24 +31,6 @@ public abstract class Presenter extends java.applet.Applet implements ActionList
 		textArea.repaint();
 	}
 	
-	public void SetUpButtons()
-	{		
-		prevButton.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				WestButtonPressed();
-			}
-		});
-		nextButton.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				EastButtonPressed();
-			}
-		});
-	}
-	
 	public JFrame getFrame() { return frame; }
 	
 	public abstract void WestButtonPressed();
