@@ -47,15 +47,14 @@ public class ImagePresenter extends Presenter
 		prevButton = new JButton("Previous Image");
 		frame.add(prevButton);
 		prevButton.addActionListener(this);
-		buttons.add(prevButton);
+		frame.add(prevButton, new BorderLayout().WEST);
 		nextButton = new JButton("Next Image");
 		frame.add(nextButton);
 		nextButton.addActionListener(this);
-		buttons.add(nextButton);
-		frame.add(buttons, new BorderLayout().EAST);
+		frame.add(nextButton,new BorderLayout().EAST);
 		
 		
-		//frame.add(textArea);
+		frame.add(textArea, new BorderLayout().NORTH);
 		frame.add(imageLab, new BorderLayout().CENTER);
 		frame.setPreferredSize(new Dimension(500,500));
 		frame.pack();
