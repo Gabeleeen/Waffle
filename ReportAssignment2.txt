@@ -1,6 +1,0 @@
-What the user needs to do is provide images as well as write those filenames as an argument for the program.
-The classes we defined was; ShowImage(self explanatory), 
-Initialize (to setup the JFrame for use), 
-CreateCenterComponent(which creates a JLabel for use), 
-actionPerformed(checks for button clicks),
-West-EastButtonpressed(Changes to correct image).
