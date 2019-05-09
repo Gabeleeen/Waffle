@@ -28,4 +28,10 @@ public class Tree<T>
 	{
 		return value;
 	}
+	
+	@ElementField(name="Weow")
+	public String getValue2()
+	{
+		return value.toString() + 123;
+	}
 }
