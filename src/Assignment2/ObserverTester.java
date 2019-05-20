@@ -23,8 +23,9 @@ public class ObserverTester
 
       TextFrame frame = new TextFrame(model);
 
-      BarFrame barFrame = new BarFrame(model, frame);
+      BarFrame barFrame = new BarFrame(model);
 
       model.attach(barFrame);
+      model.attach(frame);
    }
 }

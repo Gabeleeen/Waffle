@@ -25,7 +25,7 @@ public class BarFrame extends JFrame implements ChangeListener
 	double yBar;
 	double xBar;
 	
-   public BarFrame(DataModel dataModel, TextFrame textFrame)
+   public BarFrame(DataModel dataModel)
    {
       this.dataModel = dataModel;
       a = dataModel.getData();
@@ -72,14 +72,11 @@ public class BarFrame extends JFrame implements ChangeListener
 				public void mousePressed(MouseEvent e)
   	  			{
   	  				point = e.getPoint();
-  	  			System.out.println(getInsets());
-  	  		System.out.println(maxBar);
   	  				for(int i = 0; i < a.size(); i++)
   	  				{
   	  					if(point.getY() < getInsets().top+yBar*(i+1) && point.getY() > getInsets().top + yBar*i)
   	  					{
   	  						dataModel.update(i, (int)(((point.getX()-getInsets().left)/ICON_WIDTH)*maxBar));
-  	  						textFrame.getText()[i].setText(String.valueOf( ((int)(((point.getX()-getInsets().left)/ICON_WIDTH)*maxBar))));
   	  					}
 
   	  				}
